@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/5314e93f90.js" crossorigin="anonymous"></script>
+    <style>
+        #show{
+            visibility:visible;
+        }
+        .prBar input::-webkit-slider-thumb{
+    -webkit-appearance:none ;
+    
+    height: 2px;
+    width: 20px;
+    background-color: rgb(3, 5, 0);
+
+
+}
+#pro{
+    width: 1px;
+    max-width: 90vw;
+   
+    
+}
+.fullScreen{
+    visibility: hidden; 
+}
+#mainImg{
+    box-shadow: 0 0 2000px rgba(75, 184, 25, 0.473);
+}
+#AdsContainer{
+    visibility: hidden;
+}
+#abtAd{
+    visibility: hidden;
+}
+#nextBtn{
+    
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h1>Waves</h1> 
+         
+    </div>
+    
+    
+    <main>
+        <div class="container">
+            <div class="head"><h2>PlayList</h2></div> 
+                  
+            
+            
+            <div class="cell c1"><img src="images/NEFFEX - Go!.jpeg"><p class="songname">NEFFEX - Go!</p></div>
+            <div class="cell c2"><img src="images/Days For Tomorrow — Metro Vice.jpeg"><p class="songname">Days For Tomorrow — Metro Vice</p></div>
+            <div class="cell c3"><img src="images/Down For Anything.jpeg"><p class="songname">Down For Anything</p></div>
+            <div class="cell c4"><img src="images/Lost Sky - Fearless.jpeg"><p class="songname">Lost Sky - Fearless</p></div>
+            <div class="cell c5"><img src="images/FAVHELLA.jpeg"><p class="songname">FAVHELLA</p></div>
+            <div class="cell c6"><img src="images/NIVIRO - Orphic Night.jpeg"><p class="songname">NIVIRO - Orphic Night</p></div>
+            <div class="cell c6"><img src="images/Shiah Maisel_Clarx - Everything I Got.jpeg"><p class="songname">Shiah Maisel_Clarx - Everything I Got</p></div>
+            <div class="cell c6"><img src="images/Shiah Maisel and Clarx - Done Better.jpeg"><p class="songname">Shiah Maisel and Clarx - Done Better</p></div>
+            <div class="cell c9"><img src="images/Thymen Wiendels - Erased.jpeg"><p class="songname">Thymen Wiendels - Erased</p></div>
+            <div class="cell c10"><img src="images/Unknown Brain - Perfect 10.jpeg"><p class="songname">Unknown Brain - Perfect 10</p></div>
+            <div class="cell c11"><img src="images/Unknown Brain - Superhero.jpeg"><p class="songname">Unknown Brain - Superhero</p></div>
+            <button id="abtAd"><a href="disclaimer.html" target="_blank">About this</a></button>
+            
+        </div>
+        
+        
+               
+               
+                
+            
+
+        
+        <div id="show" class="showBtm">
+            <div class="cell btm" id="controlBtm"><img id="btmImg" src="images/Lost Sky - Fearless.jpeg"><div class="btmTextMoving"><marquee scrollamount="5"><p id="btmname">now playing..</p></marquee></div></div>
+            <!--<div id="pro"></div>-->
+            <input id="downProgress" type="range" value="0" min="0"  max="100">
+           </div> 
+            </div>
+
+        <div class="fullScreen" id="onScreenControls">
+            <div class="backToHome">
+                <i id="back" class="fa-solid fa-arrow-left"></i>
+            </div>
+             <div class="mainControls">
+               <img id="mainImg" src="images/NEFFEX.jpeg" >
+               
+                <p id="playingSongName">Song Name</p>
+               <div class="movingText">
+                <marquee scrollamount="5" ><p id ="artistName">Artist name</p></marquee>
+            </div>
+               <div class="time-progress">
+               <div class="progressBar">
+                <input id="progBar"  type="range" min="0" max="100">
+                <div class="time-line">
+                <p id="time">00:00</p>
+                <p id="Duration">00:00</p>
+                
+            </div>
+               </div>
+            </div>
+               <div class="buttonControls">
+               <button  id="prevBtn" type="button"><i class="fa-solid fa-backward"></i></button>
+               <button  id="stopBtn" type="button">Stop</button>
+               <button  id="nextBtn" type="button"><i class="fa-solid fa-forward"></i></button>
+             </div>
+             
+            </div>
+        </div>
+        <div class="addContainer" id="AdsContainer">
+            <input id="adProgress" type="range" min="0" max="100">
+            <p class="Advertisement">Advertisement</p>
+            <video id="myVideo" width="100vw" height="100vh">
+                <source src="Ads/Untitled video - Made with Clipchamp (11).mp4" type="video/mp4">
+                <!--<button id="abtAd"><a href="" target="_blank">About this</a></button>-->
+        </div>
+        
+        
+        <script src="music.js"></script>
+    </main>
+</body>
+</html>
